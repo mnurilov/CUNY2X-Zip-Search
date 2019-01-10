@@ -6,14 +6,16 @@ class App extends Component {
   constructor(props){
     super(props);
     this.state = {
-      requestedZip: "",
+      requestedZip: "10005",
     }
   }
 
   updateZip = (event) => {
-    this.setState({
-      requestedZip: event.target.value,
-    });
+    if(event.target.value.length >= 4){
+      this.setState({
+        requestedZip: event.target.value,
+      });
+    }
     // alert("event.target.value: " + String(event.target.value) + ", requestedZip: " + String(this.state.requestedZip))
   }
 

@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-// import './AZip.css';
+import './Global.css';
 
 class AZip extends Component {
 

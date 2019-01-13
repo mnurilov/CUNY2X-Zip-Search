@@ -23,9 +23,9 @@ class Request extends Component {
 
     //Maybe fetchZipCity doesn't get called after initial mount?
     fetchZipCity = () => {
-        let x = "http://ctp-zip-api.herokuapp.com/zip/" + String(this.props.requestZip) + "";
-        console.log(x);
-        axios.get("http://ctp-zip-api.herokuapp.com/zip/" + String(this.props.requestZip) + "")
+        // let x = "http://ctp-zip-api.herokuapp.com/zip/" + String(this.props.requestZip) + ;
+        // console.log(x);
+        axios.get("http://ctp-zip-api.herokuapp.com/zip/" + String(this.props.requestZip))
             .then(response => {
             	this.setState({
             		data: response.data,

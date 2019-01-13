@@ -12,9 +12,16 @@ class App extends Component {
 
   updateZip = (event) => {
     if(event.target.value.length >= 4){
-      this.setState({
-        requestedZip: event.target.value,
-      });
+      if(event.target.currentKey === null){
+        this.setState({
+          requestedZip: event.target.value,
+        });
+      } else {
+        this.setState({
+          // requestedZip: event.target.value + String(event.target.currentKey),
+          requestedZip: event.target.value,
+        });
+      }
     }
     // alert("event.target.value: " + String(event.target.value) + ", requestedZip: " + String(this.state.requestedZip))
   }

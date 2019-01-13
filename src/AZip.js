@@ -4,6 +4,7 @@ import './Global.css';
 class AZip extends Component {
 
     render() {
+
         let {
             City,
             Zipcode,
@@ -14,8 +15,7 @@ class AZip extends Component {
             Lat,
             Long,
         } = this.props.data;
-
-        console.log(this.props.data);
+        let EstimatedWagesPerPerson = parseInt(TotalWages / EstimatedPopulation);
 
         return (
             <div className="OneCity">
@@ -23,10 +23,11 @@ class AZip extends Component {
                 <div className="CityName">City: {City}</div>
                 <div className="State">State: {State}</div>
                 <div className="Country">Country: {Country}</div>
-                <div className="TotalWages">Total Wages: {TotalWages}</div>
+                <div className="TotalWages">Total Wages: ${TotalWages}</div>
                 <div className="EstimatedPopulation">Estimated Population: {EstimatedPopulation}</div>
+                <div className="EstimatedWagesPerPerson">Estimated Average Wage: ${EstimatedWagesPerPerson}</div>
                 <div className="Lat">Latitude: {Lat}</div>
-                <div className="Long">Logitude: {Long}</div>
+                <div className="Long">Longitude: {Long}</div>
             </div>
         );
     }
